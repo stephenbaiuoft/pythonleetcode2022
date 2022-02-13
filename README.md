@@ -1,6 +1,3 @@
-# py-leetcode
-
-
 <p align="center">
 <a href="https://pypi.python.org/pypi/py_leetcode">
     <img src="https://img.shields.io/pypi/v/py_leetcode.svg"
@@ -17,18 +14,16 @@
 
 </p>
 
-
 Skeleton project created by Python Project Wizard (ppw)
 
-
-* Free software: MIT
-* Documentation: <https://py-leetcode.readthedocs.io>
-
+-   Free software: MIT
+-   Documentation: <https://py-leetcode.readthedocs.io>
 
 ## Features
 
-* TODO
+-   TODO
 
 ## Credits
 
 This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [zillionare/cookiecutter-pypackage](https://github.com/zillionare/cookiecutter-pypackage) project template.
+||||||| empty tree
