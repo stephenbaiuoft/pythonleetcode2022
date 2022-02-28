@@ -1,6 +1,45 @@
 from collections import deque
 
+
 '''
+built-in functions
+
+HOW TO REVERSE A LIST STRUCTURE
+# https://www.programiz.com/python-programming/methods/built-in/reversed
+reversed() -> returns iterator for reversed order FOR LIST ONLY!
+# for string
+seq_string = 'Python'
+print(list(reversed(seq_string))) -> ['n', 'o', 'h', 't', 'y', 'P']
+
+HOW TO CONVERT LIST OF CHAR TO STRING
+l = ['a', 'bb']
+s = ''.join(l) -> 'abb' 
+
+
+https://www.30secondsofcode.org/articles/s/python-slice-notation
+python slice notation 
+[::-1] # reverse -> default start at 0, stop and end, and order -1
+
+https://www.geeksforgeeks.org/enumerate-in-python/
+python enumerate 
+-> enumerate(iterable, start=0)
+l = ['a','b', 'c']
+for i, v in enumerate(l):
+    print(i, v) # this gives  0 a     1 b   2 c 
+
+
+int to char in python -> char(90) gives the character of the unicode 
+char to int in python -> ord('a') gives the unicode of 'a'
+
+
+
+Array Init
+ary = [1] * 5 # create ONE array of [1, 1, 1, ,1, 1]
+alternatively
+ary = [1 for i in range (5)] 
+
+
+Data Structure 
 1. deque() for stack && queue
  - for queue
   - q = deque()
@@ -11,7 +50,10 @@ from collections import deque
     a = set()
     a.add(1)
     x in a # if x is in a 
-3. dict = {} for creating an empty dictionary
+3. dict = defaultdict(list) 
+ -> for creating an empty dictionary
+ -> if a key does not exist, an empty list is inserted 
+ 
     key in dict.keys() # if key is in dict.key()
     dict[key] = 'some_value' # set or update value for key
     dict.pop(key, None) to remove a key
@@ -34,6 +76,20 @@ from collections import deque
 class Demo:
     def __init__(self) -> None:
         pass
+
+    def array_init_demo(self):
+        n = 5 
+        one_d = [None] * n # use [] otherwise it'd None * n evaluation instead of multiplying 
+        # use array init 
+        one_d_alt = [None for i in range(n)]
+        print("one_d: ", one_d)
+        print("one_d_alt: ", one_d_alt)
+
+        two_d = [[None] * n for j in range(n)]
+        two_d[0][0] = 123
+        print(two_d)
+
+
 
     # deque in favor of list (double listed list)
     # deque need quicker append and pop operations from both the ends of the container, as deque provides an O(1)
@@ -84,7 +140,6 @@ class Demo:
 
 d = Demo()
 # d.deque_demo()
-
-d.stack_demo()
-
-d.queue_demo()
+#d.stack_demo()
+#d.queue_demo()
+d.array_init_demo()
